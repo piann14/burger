@@ -1,0 +1,282 @@
+/* General Body Styling */
+body {
+    background-color: #121212; /* Warna latar belakang gelap */
+    color: #f5f5f5; /* Teks abu terang */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #1c1c1c; /* Warna gelap untuk navbar */
+    border-bottom: 1px solid #333; /* Garis bawah */
+    padding: 15px 20px;
+}
+
+.navbar .navbar-brand {
+    font-weight: bold;
+    color: #f59e42; /* Warna oranye terang untuk brand */
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    color: #f5f5f5; /* Teks putih untuk link navbar */
+    margin-right: 15px;
+    font-size: 1rem;
+}
+
+.navbar .nav-link:hover {
+    color: #f59e42; /* Warna oranye saat hover */
+}
+
+/* Flex Container: Selaraskan Elemen */
+.navbar .d-flex {
+    display: flex;
+    align-items: center; /* Elemen sejajar vertikal */
+    gap: 10px; /* Jarak antar elemen */
+}
+
+/* Search Bar Styling */
+.navbar .form-control {
+    width: 200px; /* Lebar tetap */
+    height: 40px; /* Tinggi tetap agar sejajar */
+    padding: 5px 10px; /* Padding dalam */
+    background-color: #333; /* Warna gelap */
+    color: #fff; /* Teks putih */
+    border: 1px solid #444; /* Border abu */
+    border-radius: 5px; /* Sudut sedikit melengkung */
+    box-sizing: border-box; /* Pastikan padding tidak memengaruhi ukuran */
+}
+
+.navbar .form-control::placeholder {
+    color: #aaa; /* Placeholder abu terang */
+}
+
+/* Button Styling */
+.navbar .btn-warning {
+    height: 40px; /* Sama dengan search bar */
+    padding: 5px 15px; /* Padding tombol */
+    display: flex;
+    align-items: center; /* Teks di tengah secara vertikal */
+    justify-content: center; /* Teks di tengah secara horizontal */
+    background-color: #f59e42;
+    color: #fff;
+    border-radius: 5px; /* Sesuaikan dengan search bar */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .btn-warning:hover {
+    background-color: #f09c29; /* Sedikit lebih gelap saat hover */
+}
+
+.navbar .btn-warning .bi-cart3 {
+    font-size: 18px; /* Sesuaikan ukuran ikon */
+}
+
+/* Hamburger Icon */
+.navbar-toggler {
+    height: 40px; /* Tinggi sama dengan elemen lain */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    background: transparent; /* Transparan */
+    border: none; /* Hilangkan border */
+    color: #fff; /* Warna ikon */
+    font-size: 1.5rem; /* Ukuran ikon */
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('images/1.jpg') no-repeat center center/cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+/* Popular Section */
+.card {
+    background-color: #1e1e1e; /* Latar belakang kartu gelap */
+    color: #f5f5f5; /* Teks putih */
+    border: 1px solid #333; /* Border abu-abu gelap */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efek hover */
+}
+
+.card-title {
+    color: #f59e42; /* Judul kartu warna oranye */
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c; /* Warna footer gelap */
+    color: #aaa; /* Teks abu terang */
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #f59e42; /* Warna link di footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f09c29; /* Warna oranye gelap saat hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbar .d-flex {
+        flex-wrap: wrap; /* Elemen akan melipat pada layar kecil */
+        justify-content: center; /* Elemen di tengah */
+    }
+
+    .navbar .form-control {
+        width: 100%; /* Full width untuk search bar */
+        margin-bottom: 10px; /* Jarak bawah untuk tampilan rapi */
+    }
+
+    .navbar .btn-warning {
+        width: auto; /* Biarkan tombol menyesuaikan ukuran */
+    }
+}
+/* Gambar di dalam kartu */
+.card img {
+    width: 100%; /* Lebar gambar mengikuti lebar kartu */
+    height: 200px; /* Tinggi tetap untuk semua gambar */
+    object-fit: cover; /* Gambar dipotong agar sesuai tanpa mengubah rasio aspek */
+    border-radius: 8px; /* Sesuaikan sudut melengkung jika diperlukan */
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+    .card img {
+        height: 150px; /* Tinggi lebih kecil untuk layar kecil */
+    }
+}
+/* Gambar di dalam Carousel */
+.carousel-item img {
+    width: 100%; /* Lebar gambar mengikuti lebar kontainer carousel */
+    height: 400px; /* Tinggi tetap untuk semua gambar carousel */
+    object-fit: cover; /* Gambar dipotong agar sesuai tanpa mengubah rasio aspek */
+    border-radius: 8px; /* Jika diinginkan, untuk memberikan sudut melengkung */
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px; /* Sesuaikan tinggi untuk layar lebih kecil */
+    }
+}
+
+/* Menambahkan styling pada harga */
+.price {
+    font-size: 1.5rem;  /* Ukuran lebih besar agar lebih mencolok */
+    font-weight: bold;  /* Membuat teks lebih tebal */
+    color: #ffffff;     /* Warna putih agar kontras */
+    margin-top: 10px;    /* Ruang antara nama dan harga */
+    text-align: center;  /* Menyelaraskan teks ke tengah */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);  /* Menambahkan bayangan pada teks untuk meningkatkan kontras */
+    padding: 5px 10px;   /* Memberikan padding untuk latar belakang */
+    background-color: rgba(0, 0, 0, 0.4); /* Memberikan latar belakang sedikit transparan untuk meningkatkan keterbacaan */
+    border-radius: 5px;  /* Memberikan sudut melengkung agar lebih halus */
+}
+
+/* Contact Us Section Styling */
+.contact-us {
+    background-color: #121212; /* Latar belakang gelap */
+    color: #f5f5f5; /* Warna teks terang */
+}
+
+/* Heading styling */
+.contact-us h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.contact-us h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.contact-us form {
+    background-color: #1e1e1e; /* Latar belakang gelap untuk formulir */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.contact-us .form-label {
+    font-weight: bold;
+    color: #f59e42; /* Warna oranye terang */
+}
+
+.contact-us .form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-us .form-control:focus {
+    background-color: #444;
+    border-color: #f59e42; /* Fokus border berwarna oranye */
+}
+
+.contact-us button {
+    background-color: #f59e42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-us button:hover {
+    background-color: #f09c29; /* Warna lebih gelap saat hover */
+}
+
+/* Styling for Google Map */
+#map iframe {
+    border-radius: 8px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .contact-us .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-us .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #map iframe {
+        height: 200px;
+    }
+}
